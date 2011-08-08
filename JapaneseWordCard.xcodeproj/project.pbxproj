@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		257817E313EF02EA00EAA2C2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 257817DE13EF02EA00EAA2C2 /* FMDatabase.m */; };
+		257817E413EF02EA00EAA2C2 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 257817E013EF02EA00EAA2C2 /* FMDatabaseAdditions.m */; };
+		257817E513EF02EA00EAA2C2 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 257817E213EF02EA00EAA2C2 /* FMResultSet.m */; };
+		257817E913EF05EC00EAA2C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 257817E813EF05EC00EAA2C2 /* libsqlite3.dylib */; };
+		25BB0C3913EDB2CA0023449E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BB0C3813EDB2CA0023449E /* UIKit.framework */; };
+		25BB0C3B13EDB2CA0023449E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BB0C3A13EDB2CA0023449E /* Foundation.framework */; };
+		25BB0C3D13EDB2CA0023449E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BB0C3C13EDB2CA0023449E /* CoreGraphics.framework */; };
+		25BB0C4313EDB2CA0023449E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25BB0C4113EDB2CA0023449E /* InfoPlist.strings */; };
+		25BB0C4513EDB2CB0023449E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BB0C4413EDB2CB0023449E /* main.m */; };
+		25BB0C4913EDB2CB0023449E /* JapaneseWordCardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BB0C4813EDB2CB0023449E /* JapaneseWordCardAppDelegate.m */; };
+		25BB0C4C13EDB2CB0023449E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BB0C4A13EDB2CB0023449E /* MainWindow.xib */; };
+		25BB0C4F13EDB2CB0023449E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BB0C4E13EDB2CB0023449E /* RootViewController.m */; };
+		25BB0C5213EDB2CB0023449E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BB0C5013EDB2CB0023449E /* RootViewController.xib */; };
+		25CB468613EF74C600DB9279 /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CB468413EF74C600DB9279 /* WordViewController.m */; };
+		25CB468713EF74C600DB9279 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CB468513EF74C600DB9279 /* WordViewController.xib */; };
+		25CB468A13EFA77600DB9279 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CB468913EFA77600DB9279 /* Word.m */; };
+		25CB46CC13EFD1FA00DB9279 /* EditWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CB46CA13EFD1F900DB9279 /* EditWordViewController.m */; };
+		25CB46CD13EFD1FA00DB9279 /* EditWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46CB13EFD1FA00DB9279 /* EditWordViewController.xib */; };
+		25CB46D213F01EA400DB9279 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46D013F01EA400DB9279 /* Icon@2x.png */; };
+		25CB46D313F01EA400DB9279 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46D113F01EA400DB9279 /* Icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		257817DD13EF02E900EAA2C2 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		257817DE13EF02EA00EAA2C2 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		257817DF13EF02EA00EAA2C2 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		257817E013EF02EA00EAA2C2 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		257817E113EF02EA00EAA2C2 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		257817E213EF02EA00EAA2C2 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		257817E813EF05EC00EAA2C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		25BB0C3413EDB2CA0023449E /* JapaneseWordCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseWordCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25BB0C3813EDB2CA0023449E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25BB0C3A13EDB2CA0023449E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		25BB0C3C13EDB2CA0023449E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		25BB0C4013EDB2CA0023449E /* JapaneseWordCard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JapaneseWordCard-Info.plist"; sourceTree = "<group>"; };
+		25BB0C4213EDB2CA0023449E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25BB0C4413EDB2CB0023449E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25BB0C4613EDB2CB0023449E /* JapaneseWordCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JapaneseWordCard-Prefix.pch"; sourceTree = "<group>"; };
+		25BB0C4713EDB2CB0023449E /* JapaneseWordCardAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JapaneseWordCardAppDelegate.h; sourceTree = "<group>"; };
+		25BB0C4813EDB2CB0023449E /* JapaneseWordCardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JapaneseWordCardAppDelegate.m; sourceTree = "<group>"; };
+		25BB0C4B13EDB2CB0023449E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		25BB0C4D13EDB2CB0023449E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		25BB0C4E13EDB2CB0023449E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		25BB0C5113EDB2CB0023449E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		25CB468313EF74C600DB9279 /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
+		25CB468413EF74C600DB9279 /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
+		25CB468513EF74C600DB9279 /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
+		25CB468813EFA77600DB9279 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		25CB468913EFA77600DB9279 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		25CB46C913EFD1F900DB9279 /* EditWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditWordViewController.h; sourceTree = "<group>"; };
+		25CB46CA13EFD1F900DB9279 /* EditWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditWordViewController.m; sourceTree = "<group>"; };
+		25CB46CB13EFD1FA00DB9279 /* EditWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditWordViewController.xib; sourceTree = "<group>"; };
+		25CB46D013F01EA400DB9279 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		25CB46D113F01EA400DB9279 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25BB0C3113EDB2CA0023449E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257817E913EF05EC00EAA2C2 /* libsqlite3.dylib in Frameworks */,
+				25BB0C3913EDB2CA0023449E /* UIKit.framework in Frameworks */,
+				25BB0C3B13EDB2CA0023449E /* Foundation.framework in Frameworks */,
+				25BB0C3D13EDB2CA0023449E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		257817E713EF02EF00EAA2C2 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				257817DD13EF02E900EAA2C2 /* FMDatabase.h */,
+				257817DE13EF02EA00EAA2C2 /* FMDatabase.m */,
+				257817DF13EF02EA00EAA2C2 /* FMDatabaseAdditions.h */,
+				257817E013EF02EA00EAA2C2 /* FMDatabaseAdditions.m */,
+				257817E113EF02EA00EAA2C2 /* FMResultSet.h */,
+				257817E213EF02EA00EAA2C2 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		25BB0C2913EDB2CA0023449E = {
+			isa = PBXGroup;
+			children = (
+				25BB0C3E13EDB2CA0023449E /* JapaneseWordCard */,
+				25BB0C3713EDB2CA0023449E /* Frameworks */,
+				25BB0C3513EDB2CA0023449E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		25BB0C3513EDB2CA0023449E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25BB0C3413EDB2CA0023449E /* JapaneseWordCard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25BB0C3713EDB2CA0023449E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				257817E813EF05EC00EAA2C2 /* libsqlite3.dylib */,
+				25BB0C3813EDB2CA0023449E /* UIKit.framework */,
+				25BB0C3A13EDB2CA0023449E /* Foundation.framework */,
+				25BB0C3C13EDB2CA0023449E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25BB0C3E13EDB2CA0023449E /* JapaneseWordCard */ = {
+			isa = PBXGroup;
+			children = (
+				257817E713EF02EF00EAA2C2 /* FMDB */,
+				25BB0C4713EDB2CB0023449E /* JapaneseWordCardAppDelegate.h */,
+				25BB0C4813EDB2CB0023449E /* JapaneseWordCardAppDelegate.m */,
+				25BB0C4A13EDB2CB0023449E /* MainWindow.xib */,
+				25BB0C4D13EDB2CB0023449E /* RootViewController.h */,
+				25BB0C4E13EDB2CB0023449E /* RootViewController.m */,
+				25BB0C5013EDB2CB0023449E /* RootViewController.xib */,
+				25CB468313EF74C600DB9279 /* WordViewController.h */,
+				25CB468413EF74C600DB9279 /* WordViewController.m */,
+				25CB468513EF74C600DB9279 /* WordViewController.xib */,
+				25CB46C913EFD1F900DB9279 /* EditWordViewController.h */,
+				25CB46CA13EFD1F900DB9279 /* EditWordViewController.m */,
+				25CB46CB13EFD1FA00DB9279 /* EditWordViewController.xib */,
+				25CB468813EFA77600DB9279 /* Word.h */,
+				25CB468913EFA77600DB9279 /* Word.m */,
+				25BB0C3F13EDB2CA0023449E /* Supporting Files */,
+			);
+			path = JapaneseWordCard;
+			sourceTree = "<group>";
+		};
+		25BB0C3F13EDB2CA0023449E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25BB0C4013EDB2CA0023449E /* JapaneseWordCard-Info.plist */,
+				25BB0C4113EDB2CA0023449E /* InfoPlist.strings */,
+				25CB46D013F01EA400DB9279 /* Icon@2x.png */,
+				25CB46D113F01EA400DB9279 /* Icon.png */,
+				25BB0C4413EDB2CB0023449E /* main.m */,
+				25BB0C4613EDB2CB0023449E /* JapaneseWordCard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25BB0C3313EDB2CA0023449E /* JapaneseWordCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25BB0C5513EDB2CB0023449E /* Build configuration list for PBXNativeTarget "JapaneseWordCard" */;
+			buildPhases = (
+				25BB0C3013EDB2CA0023449E /* Sources */,
+				25BB0C3113EDB2CA0023449E /* Frameworks */,
+				25BB0C3213EDB2CA0023449E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JapaneseWordCard;
+			productName = JapaneseWordCard;
+			productReference = 25BB0C3413EDB2CA0023449E /* JapaneseWordCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25BB0C2B13EDB2CA0023449E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Home;
+			};
+			buildConfigurationList = 25BB0C2E13EDB2CA0023449E /* Build configuration list for PBXProject "JapaneseWordCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 25BB0C2913EDB2CA0023449E;
+			productRefGroup = 25BB0C3513EDB2CA0023449E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25BB0C3313EDB2CA0023449E /* JapaneseWordCard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25BB0C3213EDB2CA0023449E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BB0C4313EDB2CA0023449E /* InfoPlist.strings in Resources */,
+				25BB0C4C13EDB2CB0023449E /* MainWindow.xib in Resources */,
+				25BB0C5213EDB2CB0023449E /* RootViewController.xib in Resources */,
+				25CB468713EF74C600DB9279 /* WordViewController.xib in Resources */,
+				25CB46CD13EFD1FA00DB9279 /* EditWordViewController.xib in Resources */,
+				25CB46D213F01EA400DB9279 /* Icon@2x.png in Resources */,
+				25CB46D313F01EA400DB9279 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25BB0C3013EDB2CA0023449E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BB0C4513EDB2CB0023449E /* main.m in Sources */,
+				25BB0C4913EDB2CB0023449E /* JapaneseWordCardAppDelegate.m in Sources */,
+				25BB0C4F13EDB2CB0023449E /* RootViewController.m in Sources */,
+				257817E313EF02EA00EAA2C2 /* FMDatabase.m in Sources */,
+				257817E413EF02EA00EAA2C2 /* FMDatabaseAdditions.m in Sources */,
+				257817E513EF02EA00EAA2C2 /* FMResultSet.m in Sources */,
+				25CB468613EF74C600DB9279 /* WordViewController.m in Sources */,
+				25CB468A13EFA77600DB9279 /* Word.m in Sources */,
+				25CB46CC13EFD1FA00DB9279 /* EditWordViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25BB0C4113EDB2CA0023449E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25BB0C4213EDB2CA0023449E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		25BB0C4A13EDB2CB0023449E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25BB0C4B13EDB2CB0023449E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		25BB0C5013EDB2CB0023449E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25BB0C5113EDB2CB0023449E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25BB0C5313EDB2CB0023449E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		25BB0C5413EDB2CB0023449E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25BB0C5613EDB2CB0023449E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JapaneseWordCard/JapaneseWordCard-Prefix.pch";
+				INFOPLIST_FILE = "JapaneseWordCard/JapaneseWordCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		25BB0C5713EDB2CB0023449E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JapaneseWordCard/JapaneseWordCard-Prefix.pch";
+				INFOPLIST_FILE = "JapaneseWordCard/JapaneseWordCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25BB0C2E13EDB2CA0023449E /* Build configuration list for PBXProject "JapaneseWordCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25BB0C5313EDB2CB0023449E /* Debug */,
+				25BB0C5413EDB2CB0023449E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25BB0C5513EDB2CB0023449E /* Build configuration list for PBXNativeTarget "JapaneseWordCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25BB0C5613EDB2CB0023449E /* Debug */,
+				25BB0C5713EDB2CB0023449E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25BB0C2B13EDB2CA0023449E /* Project object */;
+}
