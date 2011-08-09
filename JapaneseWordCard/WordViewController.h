@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EditWordViewController.h"
 
+@protocol WordViewControllerDelegate <NSObject>
+- (void)wordViewControllerDidEndEditing;
+@end
+
 @class Word;
 @interface WordViewController : UIViewController <EditWordViewControllerDelegate> {
     NSUserDefaults *_defaults;
@@ -31,6 +35,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *previousButton;
 @property (nonatomic, retain) IBOutlet UIButton *nextButton;
 @property (nonatomic, retain) IBOutlet UISwitch *isInwordBookSwitch;
+@property (assign) id<WordViewControllerDelegate> delegate;
 
 - (IBAction)remindMe:(id)sender;
 - (IBAction)previous:(id)sender;

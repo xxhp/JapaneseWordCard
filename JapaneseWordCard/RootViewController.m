@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 #import "FMDatabase.h"
-#import "WordViewController.h"
 #import "Word.h"
 
 @implementation RootViewController
@@ -141,6 +140,7 @@
     else {
         wordControl = [[WordViewController alloc] initWithNibName:@"WordViewController" bundle:nil];
     }
+    wordControl.delegate = self;
     wordControl.levelID = indexPath.row;
     wordControl.sectionID = indexPath.section;
     [self.navigationController pushViewController:wordControl animated:YES];
@@ -164,6 +164,11 @@
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (void)wordViewControllerDidEndEditing {
+    self.levelCountsBookmarked = [Word wordCountsForAllLevelsInWordBook:YES];
+    [[self tableView] reloadData];
 }
 
 @end

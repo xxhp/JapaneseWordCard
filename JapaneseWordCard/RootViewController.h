@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WordViewController.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <WordViewControllerDelegate> {
     NSArray *levelCounts;
     NSArray *levelCountsBookmarked;
     BOOL isDatabaseReady;

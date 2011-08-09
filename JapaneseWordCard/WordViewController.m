@@ -10,6 +10,14 @@
 #import "FMDatabase.h"
 #import "Word.h"
 
+@interface WordViewController (HelperMethods)
+
+- (NSInteger)readCurrentID;
+- (void)saveCurrentStatus;
+- (void)initializeStatusStorage;
+@end
+
+
 @implementation WordViewController
 @synthesize levelID = _levelID;
 @synthesize sectionID = _sectionID;
@@ -20,6 +28,7 @@
 @synthesize previousButton = _previousButton;
 @synthesize nextButton = _nextButton;
 @synthesize isInwordBookSwitch = _isInwordBookSwitch;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +36,11 @@
     if (self) {
         // Custom initialization
         _defaults = [NSUserDefaults standardUserDefaults];
+        NSArray *progressIDs = [_defaults objectForKey:@"kRememberStatus"];
+        NSArray *progressIDsForWordBook = [_defaults objectForKey:@"kRememberStatusForWordBook"];
+        if (progressIDs == nil || progressIDsForWordBook == nil) {
+            [self initializeStatusStorage];
+        }
     }
     return self;
 }
@@ -52,7 +66,6 @@
     [rightItem release];
     
     // Fetch first word.
-    // TODO: Load from user settings to show progress.
     NSInteger level = 4 - self.levelID;
     
     if (self.sectionID == 0) {
@@ -61,8 +74,15 @@
     else {
         words = [Word wordsInLevel:level inWordBook:YES];
     }
-    currentWord = [words objectAtIndex:0];
+    currentWord = [words objectAtIndex:[self readCurrentID]];
     [self refreshInterface];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self saveCurrentStatus];
+    // Reload tableview data.
+    [self.delegate wordViewControllerDidEndEditing];
 }
 
 - (void)viewDidUnload
@@ -146,17 +166,60 @@
     EditWordViewController *editControl;
     if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
         editControl = [[EditWordViewController alloc] initWithNibName:@"EditWordViewController-iPad" bundle:nil];
+        editControl.modalPresentationStyle = UIModalPresentationFormSheet;
     }
     else {
         editControl = [[EditWordViewController alloc] initWithNibName:@"EditWordViewController" bundle:nil];
+        editControl.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     }
     editControl.word = currentWord;
     editControl.delegate = self;
+    
     [self presentModalViewController:editControl animated:YES];
 }
 
-- (void)editWirdViewControllerDidEndEditing {
+- (void)editWordViewControllerDidEndEditing {
     [self refreshInterface];
+}
+
+#pragma mark - Helper Methods
+
+- (void)saveCurrentStatus {
+    if (self.sectionID == 0) {
+        NSMutableArray *progressIDs = [[_defaults objectForKey:@"kRememberStatus"] mutableCopy];
+        [progressIDs replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:[words indexOfObject:currentWord]]];
+        [_defaults setObject:progressIDs forKey:@"kRememberStatus"];
+        [progressIDs release];
+    }
+    else {
+        NSMutableArray *progressIDsForWordBook = [[_defaults objectForKey:@"kRememberStatusForWordBook"] mutableCopy];
+        [progressIDsForWordBook replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:[words indexOfObject:currentWord]]];
+        [_defaults setObject:progressIDsForWordBook forKey:@"kRememberStatusForWordBook"];
+        [progressIDsForWordBook release];
+    }
+    [_defaults synchronize];
+}
+
+- (void)initializeStatusStorage {
+    NSNumber *zeroNumber = [NSNumber numberWithInt:0];
+    NSArray *progressIDs = [[NSArray alloc] initWithObjects:zeroNumber, zeroNumber, zeroNumber, zeroNumber, nil];
+    
+    [_defaults setObject:progressIDs forKey:@"kRememberStatus"];
+    [_defaults setObject:progressIDs forKey:@"kRememberStatusForWordBook"];
+    [_defaults synchronize];
+}
+
+- (NSInteger)readCurrentID {
+    NSInteger currentID;
+    if (self.sectionID == 0) {
+        NSArray *progressIDs = [_defaults objectForKey:@"kRememberStatus"];
+        currentID = [[progressIDs objectAtIndex:self.levelID] integerValue];
+    }
+    else {
+        NSArray *progressIDsForWordBook = [_defaults objectForKey:@"kRememberStatusForWordBook"];
+        currentID = [[progressIDsForWordBook objectAtIndex:self.levelID] integerValue];
+    }
+    return currentID;
 }
 
 @end

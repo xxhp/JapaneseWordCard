@@ -70,6 +70,11 @@
     }
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)dismissMe:(id)sender {
     [self.word setKanji:self.kanjiField.text];
     [self.word setKana:self.kanaField.text];
@@ -78,12 +83,13 @@
     [self.word save];
     
     [self dismissModalViewControllerAnimated:YES];
-    [self.delegate editWirdViewControllerDidEndEditing];
+    [self.delegate editWordViewControllerDidEndEditing];
 }
 
 - (IBAction)hideKeyboard:(id)sender {
     [self.kanaField resignFirstResponder];
     [self.imiField resignFirstResponder];
+    [self.kanjiField resignFirstResponder];
 }
 
 - (void)dealloc {

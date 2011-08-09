@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @protocol EditWordViewControllerDelegate <NSObject>
-- (void)editWirdViewControllerDidEndEditing;
+- (void)editWordViewControllerDidEndEditing;
 @end
 
 @class Word;
-@interface EditWordViewController : UIViewController {
+@interface EditWordViewController : UIViewController<UITextFieldDelegate> {
     UITextField *_kanjiField;
     UITextField *_kanaField;
     UITextField *_imiField;
