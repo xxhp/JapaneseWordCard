@@ -78,10 +78,13 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
+        return YES;
+    }
+    else {
+        return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+    }
 }
 
 - (void)dealloc {
@@ -140,7 +143,13 @@
 }
 
 - (void)editItem:(id)sender {
-    EditWordViewController *editControl = [[EditWordViewController alloc] initWithNibName:@"EditWordViewController" bundle:nil];
+    EditWordViewController *editControl;
+    if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
+        editControl = [[EditWordViewController alloc] initWithNibName:@"EditWordViewController-iPad" bundle:nil];
+    }
+    else {
+        editControl = [[EditWordViewController alloc] initWithNibName:@"EditWordViewController" bundle:nil];
+    }
     editControl.word = currentWord;
     editControl.delegate = self;
     [self presentModalViewController:editControl animated:YES];

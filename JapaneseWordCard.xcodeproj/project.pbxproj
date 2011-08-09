@@ -20,6 +20,13 @@
 		25BB0C4C13EDB2CB0023449E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BB0C4A13EDB2CB0023449E /* MainWindow.xib */; };
 		25BB0C4F13EDB2CB0023449E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BB0C4E13EDB2CB0023449E /* RootViewController.m */; };
 		25BB0C5213EDB2CB0023449E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BB0C5013EDB2CB0023449E /* RootViewController.xib */; };
+		25BFAE9913F05A55007D942F /* EditWordViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAE9713F05A55007D942F /* EditWordViewController-iPad.xib */; };
+		25BFAE9A13F05A55007D942F /* WordViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAE9813F05A55007D942F /* WordViewController-iPad.xib */; };
+		25BFAEA813F0601C007D942F /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAEA313F0601B007D942F /* Default-Landscape~ipad.png */; };
+		25BFAEA913F0601C007D942F /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAEA413F0601B007D942F /* Default-Portrait~ipad.png */; };
+		25BFAEAA13F0601C007D942F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAEA513F0601B007D942F /* Default.png */; };
+		25BFAEAB13F0601C007D942F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAEA613F0601B007D942F /* Default@2x.png */; };
+		25BFAEAC13F0601C007D942F /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BFAEA713F0601B007D942F /* Icon-iPad.png */; };
 		25CB468613EF74C600DB9279 /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CB468413EF74C600DB9279 /* WordViewController.m */; };
 		25CB468713EF74C600DB9279 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CB468513EF74C600DB9279 /* WordViewController.xib */; };
 		25CB468A13EFA77600DB9279 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CB468913EFA77600DB9279 /* Word.m */; };
@@ -27,6 +34,8 @@
 		25CB46CD13EFD1FA00DB9279 /* EditWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46CB13EFD1FA00DB9279 /* EditWordViewController.xib */; };
 		25CB46D213F01EA400DB9279 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46D013F01EA400DB9279 /* Icon@2x.png */; };
 		25CB46D313F01EA400DB9279 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CB46D113F01EA400DB9279 /* Icon.png */; };
+		25E7BAF513F04BC500607C1A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E7BAF313F04BC500607C1A /* MainWindow-iPad.xib */; };
+		25E7BAF713F04C5E00607C1A /* RootViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E7BAF613F04C5E00607C1A /* RootViewController-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,13 @@
 		25BB0C4D13EDB2CB0023449E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		25BB0C4E13EDB2CB0023449E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		25BB0C5113EDB2CB0023449E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		25BFAE9713F05A55007D942F /* EditWordViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "EditWordViewController-iPad.xib"; sourceTree = "<group>"; };
+		25BFAE9813F05A55007D942F /* WordViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "WordViewController-iPad.xib"; sourceTree = "<group>"; };
+		25BFAEA313F0601B007D942F /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		25BFAEA413F0601B007D942F /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		25BFAEA513F0601B007D942F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		25BFAEA613F0601B007D942F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		25BFAEA713F0601B007D942F /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
 		25CB468313EF74C600DB9279 /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
 		25CB468413EF74C600DB9279 /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
 		25CB468513EF74C600DB9279 /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
@@ -61,6 +77,8 @@
 		25CB46CB13EFD1FA00DB9279 /* EditWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditWordViewController.xib; sourceTree = "<group>"; };
 		25CB46D013F01EA400DB9279 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		25CB46D113F01EA400DB9279 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		25E7BAF413F04BC500607C1A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		25E7BAF613F04C5E00607C1A /* RootViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "RootViewController-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 		25BB0C3E13EDB2CA0023449E /* JapaneseWordCard */ = {
 			isa = PBXGroup;
 			children = (
+				25E7BAF213F04BC200607C1A /* iPad */,
 				257817E713EF02EF00EAA2C2 /* FMDB */,
 				25BB0C4713EDB2CB0023449E /* JapaneseWordCardAppDelegate.h */,
 				25BB0C4813EDB2CB0023449E /* JapaneseWordCardAppDelegate.m */,
@@ -129,6 +148,8 @@
 				25BB0C4D13EDB2CB0023449E /* RootViewController.h */,
 				25BB0C4E13EDB2CB0023449E /* RootViewController.m */,
 				25BB0C5013EDB2CB0023449E /* RootViewController.xib */,
+				25BFAE9713F05A55007D942F /* EditWordViewController-iPad.xib */,
+				25BFAE9813F05A55007D942F /* WordViewController-iPad.xib */,
 				25CB468313EF74C600DB9279 /* WordViewController.h */,
 				25CB468413EF74C600DB9279 /* WordViewController.m */,
 				25CB468513EF74C600DB9279 /* WordViewController.xib */,
@@ -147,12 +168,26 @@
 			children = (
 				25BB0C4013EDB2CA0023449E /* JapaneseWordCard-Info.plist */,
 				25BB0C4113EDB2CA0023449E /* InfoPlist.strings */,
+				25BFAEA313F0601B007D942F /* Default-Landscape~ipad.png */,
+				25BFAEA413F0601B007D942F /* Default-Portrait~ipad.png */,
+				25BFAEA513F0601B007D942F /* Default.png */,
+				25BFAEA613F0601B007D942F /* Default@2x.png */,
+				25BFAEA713F0601B007D942F /* Icon-iPad.png */,
 				25CB46D013F01EA400DB9279 /* Icon@2x.png */,
 				25CB46D113F01EA400DB9279 /* Icon.png */,
 				25BB0C4413EDB2CB0023449E /* main.m */,
 				25BB0C4613EDB2CB0023449E /* JapaneseWordCard-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25E7BAF213F04BC200607C1A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				25E7BAF313F04BC500607C1A /* MainWindow-iPad.xib */,
+				25E7BAF613F04C5E00607C1A /* RootViewController-iPad.xib */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +248,15 @@
 				25CB46CD13EFD1FA00DB9279 /* EditWordViewController.xib in Resources */,
 				25CB46D213F01EA400DB9279 /* Icon@2x.png in Resources */,
 				25CB46D313F01EA400DB9279 /* Icon.png in Resources */,
+				25E7BAF513F04BC500607C1A /* MainWindow-iPad.xib in Resources */,
+				25E7BAF713F04C5E00607C1A /* RootViewController-iPad.xib in Resources */,
+				25BFAE9913F05A55007D942F /* EditWordViewController-iPad.xib in Resources */,
+				25BFAE9A13F05A55007D942F /* WordViewController-iPad.xib in Resources */,
+				25BFAEA813F0601C007D942F /* Default-Landscape~ipad.png in Resources */,
+				25BFAEA913F0601C007D942F /* Default-Portrait~ipad.png in Resources */,
+				25BFAEAA13F0601C007D942F /* Default.png in Resources */,
+				25BFAEAB13F0601C007D942F /* Default@2x.png in Resources */,
+				25BFAEAC13F0601C007D942F /* Icon-iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +304,14 @@
 				25BB0C5113EDB2CB0023449E /* en */,
 			);
 			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		25E7BAF313F04BC500607C1A /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E7BAF413F04BC500607C1A /* en */,
+			);
+			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,7 +366,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JapaneseWordCard/JapaneseWordCard-Prefix.pch";
 				INFOPLIST_FILE = "JapaneseWordCard/JapaneseWordCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -325,7 +379,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JapaneseWordCard/JapaneseWordCard-Prefix.pch";
 				INFOPLIST_FILE = "JapaneseWordCard/JapaneseWordCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

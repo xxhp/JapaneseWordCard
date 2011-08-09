@@ -51,6 +51,15 @@
 	[super viewDidDisappear:animated];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
+        return YES;
+    }
+    else {
+        return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+    }
+}
+
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -125,8 +134,13 @@
     if (indexPath.section == 1 && [[self.levelCountsBookmarked objectAtIndex:(3 - indexPath.row)] intValue] == 0) {
         return;
     }
-    
-    WordViewController *wordControl = [[WordViewController alloc] initWithNibName:@"WordViewController" bundle:nil];
+    WordViewController *wordControl;
+    if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
+        wordControl = [[WordViewController alloc] initWithNibName:@"WordViewController-iPad" bundle:nil];
+    }
+    else {
+        wordControl = [[WordViewController alloc] initWithNibName:@"WordViewController" bundle:nil];
+    }
     wordControl.levelID = indexPath.row;
     wordControl.sectionID = indexPath.section;
     [self.navigationController pushViewController:wordControl animated:YES];

@@ -44,7 +44,6 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissMe:)];
     self.navItem.rightBarButtonItem = rightItem;
     [rightItem release];
-    [(UIScrollView *)self.view setContentSize:CGSizeMake(320, 416)];
     // Initialize text fields.
     self.kanjiField.text = self.word.kanji;
     self.kanaField.text = self.word.kana;
@@ -62,10 +61,13 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    if ([[[UIDevice currentDevice] model] rangeOfString:@"iPad"].location != NSNotFound) {
+        return YES;
+    }
+    else {
+        return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+    }
 }
 
 - (void)dismissMe:(id)sender {
