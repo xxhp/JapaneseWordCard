@@ -9,22 +9,16 @@ Japanese Word Card
 **TODO：**
 
 - 加入生词本导出功能；
-
 - 加入iOS 5的词典服务支持；
-
 - 优化单词记忆流程，加入测试模式；
-
 - 某些目前还没有想到的功能。
 
 
 **使用方法：**
 
 1. 下载，编译；
-
 2. 如果进行机上测试，请通过iTunes把辞典文件同步到程序中；
-
 3. 如果在Simulator中测试，把文件放到NSHomeDirectory()中，OSX下的路径类似：/Users/*YourName*/Library/Application Support/iPhone Simulator/4.3.2/Applications/DAEF760E-91D4-41CD-9168-2CD620529E28的目录下；
-
 4. 运行并使用。
 
 
