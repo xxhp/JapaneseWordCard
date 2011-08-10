@@ -185,15 +185,20 @@
 #pragma mark - Helper Methods
 
 - (void)saveCurrentStatus {
+    NSInteger currentID = [words indexOfObject:currentWord];
+    NSInteger wordsCount = [words count];
+    if (currentID >= (wordsCount - 1)) {
+        currentID %= (wordsCount - 1);
+    }
     if (self.sectionID == 0) {
         NSMutableArray *progressIDs = [[_defaults objectForKey:@"kRememberStatus"] mutableCopy];
-        [progressIDs replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:[words indexOfObject:currentWord]]];
+        [progressIDs replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:currentID]];
         [_defaults setObject:progressIDs forKey:@"kRememberStatus"];
         [progressIDs release];
     }
     else {
         NSMutableArray *progressIDsForWordBook = [[_defaults objectForKey:@"kRememberStatusForWordBook"] mutableCopy];
-        [progressIDsForWordBook replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:[words indexOfObject:currentWord]]];
+        [progressIDsForWordBook replaceObjectAtIndex:self.levelID withObject:[NSNumber numberWithInt:currentID]];
         [_defaults setObject:progressIDsForWordBook forKey:@"kRememberStatusForWordBook"];
         [progressIDsForWordBook release];
     }
