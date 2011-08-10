@@ -37,6 +37,7 @@
 @property (nonatomic, retain) IBOutlet UISwitch *isInwordBookSwitch;
 @property (assign) id<WordViewControllerDelegate> delegate;
 
+
 - (IBAction)remindMe:(id)sender;
 - (IBAction)previous:(id)sender;
 - (IBAction)next:(id)sender;

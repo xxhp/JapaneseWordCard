@@ -41,6 +41,18 @@
         if (progressIDs == nil || progressIDsForWordBook == nil) {
             [self initializeStatusStorage];
         }
+        
+        UISwipeGestureRecognizer *gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
+        [self.view addGestureRecognizer:gestureRecognizer];
+        gestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+        [gestureRecognizer release];
+        gestureRecognizer = nil;
+        
+        gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(previous:)];
+        [self.view addGestureRecognizer:gestureRecognizer];
+        gestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+        [gestureRecognizer release];
+        gestureRecognizer = nil;
     }
     return self;
 }
