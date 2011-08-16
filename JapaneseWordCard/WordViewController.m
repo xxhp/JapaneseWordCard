@@ -35,24 +35,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _defaults = [NSUserDefaults standardUserDefaults];
-        NSArray *progressIDs = [_defaults objectForKey:@"kRememberStatus"];
-        NSArray *progressIDsForWordBook = [_defaults objectForKey:@"kRememberStatusForWordBook"];
-        if (progressIDs == nil || progressIDsForWordBook == nil) {
-            [self initializeStatusStorage];
-        }
-        
-        UISwipeGestureRecognizer *gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
-        [self.view addGestureRecognizer:gestureRecognizer];
-        gestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-        [gestureRecognizer release];
-        gestureRecognizer = nil;
-        
-        gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(previous:)];
-        [self.view addGestureRecognizer:gestureRecognizer];
-        gestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-        [gestureRecognizer release];
-        gestureRecognizer = nil;
     }
     return self;
 }
@@ -71,6 +53,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *progressIDs = [_defaults objectForKey:@"kRememberStatus"];
+    NSArray *progressIDsForWordBook = [_defaults objectForKey:@"kRememberStatusForWordBook"];
+    if (progressIDs == nil || progressIDsForWordBook == nil) {
+        [self initializeStatusStorage];
+    }
+    
+    UISwipeGestureRecognizer *gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    gestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [gestureRecognizer release];
+    gestureRecognizer = nil;
+    
+    gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(previous:)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    gestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [gestureRecognizer release];
+    gestureRecognizer = nil;
     
     //Add an edit buttom
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editItem:)];
@@ -141,12 +141,20 @@
 }
 
 - (IBAction)previous:(id)sender {
-    currentWord = [words objectAtIndex:[words indexOfObject:currentWord] - 1];
+    NSInteger previousWordIndex = [words indexOfObject:currentWord] - 1;
+    if (previousWordIndex < 0) {
+        return;
+    }
+    currentWord = [words objectAtIndex:previousWordIndex];
     [self refreshInterface];
 }
 
 - (IBAction)next:(id)sender {
-    currentWord = [words objectAtIndex:[words indexOfObject:currentWord] + 1];
+    NSInteger nextWordIndex = [words indexOfObject:currentWord] + 1;
+    if (nextWordIndex >= [words count]) {
+        return;
+    }
+    currentWord = [words objectAtIndex:nextWordIndex];
     [self refreshInterface];
 }
 
@@ -235,6 +243,10 @@
     else {
         NSArray *progressIDsForWordBook = [_defaults objectForKey:@"kRememberStatusForWordBook"];
         currentID = [[progressIDsForWordBook objectAtIndex:self.levelID] integerValue];
+    }
+    // Ensure id not beyond words count.
+    if (currentID >= [words count]) {
+        currentID = 0;
     }
     return currentID;
 }
