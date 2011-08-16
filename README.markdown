@@ -25,6 +25,7 @@ Japanese Word Card
 **版权说明：**
 
 代码随意使用和参考。不过请不要把这个App简单的改个名字，改几个变量名就扔到AppStore去卖。如果是免费软件，我也就不想计较了；如果是收费软件，则必须经过我的允许。
+FMDataBase的源码版权请参考这里（https://github.com/ccgus/fmdb/blob/master/LICENSE.txt）。
 
 
 **其他：**
@@ -32,3 +33,6 @@ Japanese Word Card
 测试用的词典数据库下载地址： http://d.pr/NaxK 词典数据库来自网络下载，版权所属不明，仅供个人测试使用。
 
 
+**致谢：**
+
+本程序使用了开源的SQLite3 Objective-C Wrapper, FMDatabase(https://github.com/ccgus/fmdb)，在此表示感谢。
